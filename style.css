@@ -1,0 +1,445 @@
+/* 
+General Styles 
+*/
+*{
+    font-family: "Montserrat", sans-serif;
+}
+p {
+    text-align: justify;
+    color: #212529;
+}
+
+.welcome {
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+}
+
+.background-container {
+    background-color: #F8F9FA;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start; /* Align content at the top vertically */
+    justify-content: center; /* Center content horizontally */
+    padding-top: 20px; /* Optional: Add some spacing from the top */
+}
+
+.container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.purple-text{
+    color: #5a189a;
+}
+
+.row {
+    width: 100%; /* Make the row stretch full width */
+    height: auto; /* Adjust height based on content */
+}
+/*
+Book Grid Styling
+*/
+/* General Grid Styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Enhanced Book Card Styling */
+.book-card {
+    display: flex; /* Enables flexbox for layout management */
+    flex-direction: column; /* Ensures the card content is arranged vertically */border: none; /* Remove basic border */
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+    overflow: hidden; /* Crop overflow for a clean look */
+    background: linear-gradient(135deg, #fff, #f7f7f7); /* Subtle gradient background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.book-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Book Cover Image */
+.book-card img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for consistent layout */
+    object-fit: cover; /* Keep image proportions */
+    border-bottom: 2px solid #ddd; /* Visual separation */
+}
+
+/* Book Title */
+.book-card h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 15px 0 10px; /* Space around the title */
+    color: #5a189a; /* Vibrant purple color */
+    font-size: 1.5em; /* Larger font size */
+    font-family: "Edu AU VIC WA NT Arrows", cursive; /* Unique font for personality */
+}
+
+/* Author and Description */
+.book-card p {
+    margin: 5px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #555; /* Muted text color for readability */
+    font-size: 0.95em; /* Slightly smaller than the title */
+    line-height: 1.5; /* Better readability */
+}
+
+/* Emphasized Text (e.g., Author, Available Copies) */
+.book-card p strong {
+    color: #333; /* Darker color for emphasis */
+    font-weight: bold;
+}
+
+/* Borrow Button*/
+.book-card .borrow-button {
+    display: inline-block;
+    align-self: flex-end;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #5a189a; /* Matching the title color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.book-card .borrow-button:hover {
+    background-color: #7b2cbf; /* Lighter purple on hover */
+}
+
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 
+Book card Modal pop-up styling
+*/
+.modal-header {
+    border-bottom: 1px solid #ddd;
+    background-color: #7b2cbf !important;
+    
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+}
+
+.modal-body img {
+    margin-bottom: 15px;
+}
+
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-footer .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #7b2cbf;
+}
+
+
+
+/* 
+Artistic Carousel Image Styling 
+*/
+.artistic-image {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Image should fill the carousel item */
+    object-fit: cover; /* Ensure the image scales nicely */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Adds a dark shadow at the bottom */
+}
+
+/* Overlay for Text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)); /* Dark gradient overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Center the text horizontally */
+    color: white;
+    padding: 20px;
+}
+
+/* Carousel Image Title Styling */
+.image-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds depth to the text */
+}
+
+/* Carousel Image Description Styling */
+.image-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0.9;
+    color: #F8F9FA;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*
+The Profile Page Styling
+*/
+.profile-container {
+    background: linear-gradient(135deg, #5a189a, #212529);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #F8F9FA;
+}
+
+.form-label {
+    color: #F8F9FA;
+}
+
+.btn-custom {
+    background-color: #5a189a;
+    color: #F8F9FA;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #6c2bbd;
+}
+
+.hidden {
+    display: none;
+}
+
+.rounded-btn {
+    border-radius: 30px;
+}
+
+.profile-background{
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #212529;
+    color: #F8F9FA;
+}
+
+/*
+The admin dashboard styling
+*/
+.admin-dashboard-body {
+    background-color: #F8F9FA;
+    color: #212529;
+    max-width: 100%;
+    max-height: 100%;
+}
+.admin-dashboard-card {
+    background: linear-gradient(135deg, #5a189a, #212529);
+    color: #F8F9FA;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.admin-dashboard-card .btn {
+    border-radius: 25px;
+}
+.admin-dashboard-card-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.stat-card {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+.stat-card .icon {
+    color: #F8F9FA;
+    opacity: 0.8;
+}
+.stat-card .icon i {
+    transition: color 0.3s ease;
+}
+.stat-card:hover .icon i {
+    color: #FFD700;
+}
+.stat-card h3 {
+    font-size: 2.5rem;
+}
+.action-btn {
+    border-radius: 25px;
+}
+.table {
+    background: #212529;
+    /* border-radius: 8px; */
+    color: #F8F9FA;
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.card-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #F8F9FA; /* Ensures text is white */
+    background-color: transparent; /* Optional, keep background aligned with theme */
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px); /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+/*
+* Admin Book details view styles
+*/
+.custom-card-header {
+    background-color: #5a189a;
+    color: white;
+}
+
+.return-btn {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple gradient */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    padding: 8px 20px; /* Add padding */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px; /* Add spacing between letters */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.return-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Inverse gradient on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+.return-btn:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 4px 2px rgba(101, 54, 240, 0.5); /* Focus glow */
+}
+
+.return-btn:active {
+    transform: scale(0.98); /* Pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
+
+/*
+* All Books Styling
+*/
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.admin-book-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.admin-book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+.admin-book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.admin-book-card-body {
+    padding: 15px;
+}
+.admin-book-card-body h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+.admin-book-card-body p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+.admin-book-card-body .availability {
+    font-weight: bold;
+    color: #28a745;
+}
+.total-books {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*
+* Chart styling
+*/
+.chart-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+}
+.chart-card-header {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.chart-card-body {
+    padding: 20px;
+}
